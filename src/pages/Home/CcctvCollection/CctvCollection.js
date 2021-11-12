@@ -17,7 +17,7 @@ const CctvCollection = () => {
     return (
             <Container sx={{pt:3, display:"flex", flexWrap:'wrap', justifyContent:"center"}} >
                 {
-                    cctvCol.map(mapCCtv =><Cctv key={mapCCtv.id} mapCCtv={mapCCtv}></Cctv>)
+                    cctvCol.map(mapCCtv =><Cctv key={mapCCtv.id} mapCCtv={mapCCtv}></Cctv>).slice(0, 6)
                 }
                
             </Container>

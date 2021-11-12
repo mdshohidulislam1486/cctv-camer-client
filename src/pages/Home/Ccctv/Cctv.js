@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const Cctv = ({mapCCtv}) => {
-    const {name, img} = mapCCtv
+    const {name, img, description} = mapCCtv
     return (
     <Card sx={{ maxWidth: 345, m:2 }}>
         <CardMedia
@@ -21,8 +21,7 @@ const Cctv = ({mapCCtv}) => {
             {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description.slice(0, 150)}
         </Typography>
         </CardContent>
         <CardActions>
