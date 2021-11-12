@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 
 const Cctv = ({mapCCtv}) => {
     const {name, img, description} = mapCCtv
@@ -26,7 +27,7 @@ const Cctv = ({mapCCtv}) => {
         </CardContent>
         <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <NavLink  to={`/buynow/${mapCCtv.id}`} ><Button size="small">Buy Now</Button></NavLink>
         </CardActions>
     </Card>
     );
