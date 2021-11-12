@@ -33,7 +33,7 @@ fetch(url, {
 
     return (
         <>
-        <Header></Header>
+
         <Container sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
             {
             orders.map(order =><AllOrder key={order._id}

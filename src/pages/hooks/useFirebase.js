@@ -28,7 +28,7 @@ const useFirebase = ()=>{
           // send name to firebase after creation
           setUser(newUser)
           // save user to data base 
-          saveUser(email, name, 'POST')
+          saveUser(email, name, "POST")
             updateProfile(auth.currentUser, {
               displayName:name, 
             }).then(() => {
@@ -92,9 +92,9 @@ const useFirebase = ()=>{
     }, [])
 
     useEffect(()=>{
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`http://localhost:5000/users/${user?.email}`)
       .then(res => res.json())
-      .then(data => setAdmin(data.admin))
+      .then(data => setAdmin(data?.admin))
 
     }, [user.email])
 

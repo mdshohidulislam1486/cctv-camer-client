@@ -42,7 +42,6 @@ const MyOrders = () => {
 
     return (
         <>
-        <Header></Header>
         <Container sx={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
             {
                 individul.map(singleUserOrd =><MyOrder 

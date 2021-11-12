@@ -76,7 +76,7 @@ const BuyNow = () => {
                 <input placeholder="Billing Address" type='text' {...register("address")} required />
                 <input placeholder="Enter Phone number" type="number" {...register("phonenumber")} required />
     
-                <input defaultValue={currentOrders?.name} type='text' {...register("camera")}  required/>
+                <input defaultValue={currentOrders?.name} type='text' {...register("camera")} />
                 <div><input placeholder="" type="submit" /></div>
             </form>
     </Container>
