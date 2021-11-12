@@ -9,7 +9,7 @@ const CctvCollection = () => {
     const [cctvCol, setCctvCol] = useState([])
 
     useEffect(()=>{
-    fetch('http://localhost:5000/cctv')
+    fetch('https://damp-shelf-10750.herokuapp.com/cctv')
     .then(res => res.json())
     .then(data => setCctvCol(data))
     },[])

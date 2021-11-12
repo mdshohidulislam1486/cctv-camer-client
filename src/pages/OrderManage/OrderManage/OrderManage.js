@@ -5,12 +5,6 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,8 +12,6 @@ import {
 
   Switch,
   Route,
-  Link,
-  useParams,
   useRouteMatch,
   NavLink
 } from "react-router-dom";
@@ -51,9 +43,11 @@ function OrderManage(props) {
       <Divider/>
       <NavLink  sx={{display:'inline-block'}} to={`${url}`}> <Button >My Order</Button></NavLink> 
       <Divider/> 
-      <NavLink  sx={{display:'block'}} to={`${url}/allorder`}> <Button >All orders</Button></NavLink> 
-      <Divider/>
-      {admin && <Box> <NavLink  sx={{display:'block'}} to={`${url}/makeAdmin`}> <Button >Make An Admin</Button></NavLink> 
+      
+      {admin && <Box>
+        <NavLink  sx={{display:'block'}} to={`${url}/allorder`}> <Button >All orders</Button></NavLink> 
+        <Divider/>
+        <NavLink  sx={{display:'block'}} to={`${url}/makeAdmin`}> <Button >Make An Admin</Button></NavLink> 
       <Divider/>
       <NavLink  sx={{display:'block'}} to={`${url}/addservice`}> <Button >Add a service</Button></NavLink></Box> }
      
@@ -64,7 +58,7 @@ function OrderManage(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', minHeight:'100vh' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -126,7 +120,7 @@ function OrderManage(props) {
       >
         <Toolbar />
 
-        <Switch>
+        <Switch >
           <Route exact path={path}>
             <MyOrders></MyOrders>
           </Route>
@@ -140,7 +134,6 @@ function OrderManage(props) {
             <AddNewProduct></AddNewProduct>
           </Route>
         </Switch>
-       
        
       </Box>
     </Box>

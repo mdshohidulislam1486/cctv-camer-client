@@ -20,7 +20,7 @@ const BuyNow = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://damp-shelf-10750.herokuapp.com/orders', data)
         .then(res => {
             if(res.data.insertedId){
                 alert('Your order is confirmed')
@@ -36,7 +36,7 @@ const BuyNow = () => {
     const [currentOrders, setCurrentOrder] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/cctv')
+        fetch('https://damp-shelf-10750.herokuapp.com/cctv')
         .then(res => res.json())
         .then(data => setOrder(data))
     },[])

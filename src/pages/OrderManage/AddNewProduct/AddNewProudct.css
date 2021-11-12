@@ -1,0 +1,13 @@
+.add-new{
+    display: flex;
+    flex-direction:column;
+    width: 70%;
+    outline: none;
+    
+}
+.add-new input, textarea{
+    outline: none;
+    min-height: 30px;
+    border-radius: 5px;
+    border:2px solid rgb(31, 114, 223);
+}

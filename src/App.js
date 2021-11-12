@@ -9,6 +9,8 @@ import AllOrders from './pages/AllOrders/AllOrders';
 import PriavateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './pages/MyOrders/MyOrders';
 import OrderManage from './pages/OrderManage/OrderManage/OrderManage';
+import OurCollections from './pages/OurCollections/OurCollections';
+import Footer from './pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -28,6 +30,9 @@ function App() {
             <Route  path='/register'>
               <Register></Register>
             </Route>
+            <Route  path='/ourcollection'>
+              <OurCollections></OurCollections>
+            </Route>
             <PriavateRoute  path='/allorder'>
               <AllOrders></AllOrders>
             </PriavateRoute>
@@ -42,6 +47,7 @@ function App() {
               <BuyNow></BuyNow>
             </PriavateRoute>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
   );

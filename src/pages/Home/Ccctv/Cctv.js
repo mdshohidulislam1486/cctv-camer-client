@@ -26,7 +26,7 @@ const Cctv = ({mapCCtv}) => {
         </Typography>
         </CardContent>
         <CardActions>
-        <NavLink  sx={{textDecoration:"none"}}  to={`/buynow/${mapCCtv.id}`} ><Button sx={{textDecoration:"none"}} variant='contained' size="small">Buy Now</Button></NavLink>
+        <NavLink    style={{textDecoration:'none'}}  to={`/buynow/${mapCCtv.id}`} ><Button  sx={{textDecoration:"none"}} variant='contained' size="small">Buy Now</Button></NavLink>
         </CardActions>
     </Card>
     );

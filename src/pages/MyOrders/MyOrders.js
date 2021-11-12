@@ -10,7 +10,7 @@ const MyOrders = () => {
     const {user} = useAuth()
 
     useEffect(()=>{
-        const url = `http://localhost:5000/orders`
+        const url = `https://damp-shelf-10750.herokuapp.com/orders`
         fetch(url)
         .then(res => res.json())
         .then(data => setSingleUserOrder(data))
@@ -23,7 +23,7 @@ const MyOrders = () => {
     },[singleUserOrder])
 
     const handleDelteUser = id=>{
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://damp-shelf-10750.herokuapp.com/orders/${id}`
         fetch(url, {
             method:'DELETE'
         })

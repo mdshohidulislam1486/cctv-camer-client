@@ -29,7 +29,7 @@ const Login = () => {
         signInwithGoogle(location, history)
     }
     return (
-        <Container sx={{mt:5}}>
+        <Container sx={{mt:5, minHeight:"100vh"}}>
             <Grid container spacing={2}> 
                 <Grid item xs={12} md={6} sx={{mt:5}}>
                     <Typography variant={'body1'} gutterBottom>
