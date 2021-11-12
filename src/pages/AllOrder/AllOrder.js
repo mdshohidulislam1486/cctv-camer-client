@@ -29,7 +29,7 @@ const {name, address, createdAt, camera} = order
             <Typography variant="body2">
             {createdAt}
             <br />
-            {'"Will delivered within nex 5 working day"'}
+            {'"Will delivered within next 5 working day"'}
             </Typography>
         </CardContent>
         <CardActions>

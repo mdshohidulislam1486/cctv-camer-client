@@ -6,6 +6,7 @@ import useAuth from '../../hooks/useAuth';
 
 
 
+
 const PriavateRoute = ({children,...rest}) => {
 
     const {user, isLoading} =useAuth()

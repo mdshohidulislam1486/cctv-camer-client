@@ -6,6 +6,8 @@ import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import BuyNow from './pages/BuyNow/BuyNow';
 import AllOrders from './pages/AllOrders/AllOrders';
+import PriavateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import MyOrders from './pages/MyOrders/MyOrders';
 
 
 function App() {
@@ -25,12 +27,15 @@ function App() {
             <Route  path='/register'>
               <Register></Register>
             </Route>
-            <Route  path='/allorder'>
+            <PriavateRoute  path='/allorder'>
               <AllOrders></AllOrders>
-            </Route>
-            <Route exact path='/buynow/:id'>
+            </PriavateRoute>
+            <PriavateRoute  path='/myorder'>
+              <MyOrders></MyOrders>
+            </PriavateRoute>
+            <PriavateRoute exact path='/buynow/:id'>
               <BuyNow></BuyNow>
-            </Route>
+            </PriavateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

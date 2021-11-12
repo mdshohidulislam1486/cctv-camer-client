@@ -10,6 +10,7 @@ import { Container } from '@mui/material';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
+import Header from '../Shared/Header/Header';
 
 
 
@@ -47,6 +48,8 @@ const BuyNow = () => {
     
 
     return (
+    <>
+    <Header></Header>
     <Container sx={{pt:5, display:"flex", justifyContent:'center', alignItems:'center'}}>
         <Card sx={{ maxWidth: 500, border: 0, boxShadow:0}}>
             <CardMedia
@@ -77,6 +80,7 @@ const BuyNow = () => {
                 <div><input placeholder="" type="submit" /></div>
             </form>
     </Container>
+    </>
     );
 };
 
