@@ -8,6 +8,7 @@ import BuyNow from './pages/BuyNow/BuyNow';
 import AllOrders from './pages/AllOrders/AllOrders';
 import PriavateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './pages/MyOrders/MyOrders';
+import OrderManage from './pages/OrderManage/OrderManage/OrderManage';
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
             <PriavateRoute  path='/myorder'>
               <MyOrders></MyOrders>
             </PriavateRoute>
+            <PriavateRoute  path='/orderManage'>
+              <OrderManage></OrderManage>
+            </PriavateRoute>
+
             <PriavateRoute exact path='/buynow/:id'>
               <BuyNow></BuyNow>
             </PriavateRoute>

@@ -26,7 +26,7 @@ const Header = () => {
             <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Doctors Portal
+        
             </Typography>
             <NavLink to='/home'> <Button color="inherit">Home</Button></NavLink>
             <NavLink to='/appointment'> <Button color="inherit">Appointment</Button></NavLink>
@@ -34,6 +34,7 @@ const Header = () => {
                 <Box>
                     
                     <NavLink style={{textDecoration:'none', color:'#fff'}} to='/allorder'><Button color="inherit">Order Manage</Button></NavLink> 
+                    <NavLink style={{textDecoration:'none', color:'#fff'}} to='/orderManage'><Button color="inherit">Admin Manage</Button></NavLink> 
                     <NavLink style={{textDecoration:'none', color:'#fff'}} to='/myorder'><Button color="inherit">my Order</Button></NavLink> 
                     <Button onClick={logOut} color="inherit">Logout</Button>    
                 </Box>
