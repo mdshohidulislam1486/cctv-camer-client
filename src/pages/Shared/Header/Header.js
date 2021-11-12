@@ -33,7 +33,8 @@ const Header = () => {
              {user?.email ?
                 <Box>
                     
-                    <NavLink style={{textDecoration:'none', color:'#fff'}} to='/allorder'><Button color="inherit">Dashboard</Button></NavLink> 
+                    <NavLink style={{textDecoration:'none', color:'#fff'}} to='/allorder'><Button color="inherit">Order Manage</Button></NavLink> 
+                    <NavLink style={{textDecoration:'none', color:'#fff'}} to='/myorder'><Button color="inherit">my Order</Button></NavLink> 
                     <Button onClick={logOut} color="inherit">Logout</Button>    
                 </Box>
                : <NavLink style={{textDecoration:'none', color:'#fff'}} to='/login'><Button color="inherit">Login</Button></NavLink> }
