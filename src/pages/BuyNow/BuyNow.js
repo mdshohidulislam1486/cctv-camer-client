@@ -22,14 +22,14 @@ const BuyNow = () => {
         axios.post('http://localhost:5000/orders', data)
         .then(res => {
             if(res.data.insertedId){
-                alert('Your booking is confirmed')
+                alert('Your order is confirmed')
                 reset()
             }
         console.log(res)
         })
         
     }; 
-
+    const {user} = useAuth()
     let {id} = useParams();
     const [order, setOrder] = useState()
     const [currentOrders, setCurrentOrder] = useState([])
@@ -44,7 +44,7 @@ const BuyNow = () => {
         const currentOrder = order?.find(myOrder=>myOrder.id === id)
         setCurrentOrder(currentOrder)
     }, [order])
-    const {user} = useAuth()
+    
 
     return (
     <Container sx={{pt:5, display:"flex", justifyContent:'center', alignItems:'center'}}>
@@ -53,7 +53,7 @@ const BuyNow = () => {
             component="img"
             height="350"
             image={currentOrders?.img}
-            alt="green iguana"
+            alt="camera img"
             />
             <CardContent >
             <Typography gutterBottom variant="h5" component="div">
@@ -68,12 +68,12 @@ const BuyNow = () => {
             </CardActions>
         </Card>
         <form  onSubmit={handleSubmit(onSubmit)}>
-                <input defaultValue={user?.displayName} {...register("name")} />
-                <input defaultValue={user?.email} {...register("email")} />
+                <input defaultValue={user.displayName} {...register("name")} />
+                <input defaultValue={user.email} {...register("email")} />
                 <input placeholder="Billing Address" type='text' {...register("address")} required />
                 <input placeholder="Enter Phone number" type="number" {...register("phonenumber")} required />
     
-                <input placeholder='Please enter the product name' type='text' {...register("package")}  required/>
+                <input defaultValue={currentOrders?.name} type='text' {...register("camera")}  required/>
                 <div><input placeholder="" type="submit" /></div>
             </form>
     </Container>
