@@ -21,6 +21,7 @@ import AllOrders from '../../AllOrders/AllOrders';
 import MakeAdmin from '../../MakdeAdmin/MakeAdmin';
 import AddNewProduct from '../AddNewProduct/AddNewProduct';
 import useAuth from '../../hooks/useAuth';
+import Payment from '../Payment/Payment';
 
 
  
@@ -43,13 +44,15 @@ function OrderManage(props) {
       <Divider/>
       <NavLink  sx={{display:'inline-block'}} to={`${url}`}> <Button >My Order</Button></NavLink> 
       <Divider/> 
+      <NavLink  sx={{display:'block'}} to={`${url}/payment`}> <Button >Make Payment </Button></NavLink> 
+      <Divider/> 
       
       {admin && <Box>
         <NavLink  sx={{display:'block'}} to={`${url}/allorder`}> <Button >All orders</Button></NavLink> 
         <Divider/>
         <NavLink  sx={{display:'block'}} to={`${url}/makeAdmin`}> <Button >Make An Admin</Button></NavLink> 
       <Divider/>
-      <NavLink  sx={{display:'block'}} to={`${url}/addservice`}> <Button >Add a service</Button></NavLink></Box> }
+      <NavLink  sx={{display:'block'}} to={`${url}/addservice`}> <Button >Add a new product</Button></NavLink></Box> }
      
       
     </div>
@@ -126,6 +129,9 @@ function OrderManage(props) {
           </Route>
           <Route  path={`${path}/allorder`}>
             <AllOrders></AllOrders>
+          </Route>
+          <Route  path={`${path}/payment`}>
+            <Payment></Payment>
           </Route>
           <Route  path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
