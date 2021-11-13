@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import useAuth from '../hooks/useAuth';
@@ -50,27 +50,32 @@ const BuyNow = () => {
     return (
     <>
     <Header></Header>
-    <Container sx={{pt:5, display:"flex", justifyContent:'center', alignItems:'center'}}>
-        <Card sx={{ maxWidth: 500, border: 0, boxShadow:0}}>
-            <CardMedia
-            component="img"
-            height="350"
-            image={currentOrders?.img}
-            alt="camera img"
-            />
-            <CardContent >
-            <Typography gutterBottom variant="h5" component="div">
-                {currentOrders?.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-                {currentOrders?.description}
-            </Typography>
-            </CardContent>
-            <CardActions>
-            <Button size="small">Share</Button>
-            </CardActions>
-        </Card>
-        <form  onSubmit={handleSubmit(onSubmit)}>
+    <Container sx={{mt:5}}>
+        <Grid container spacing={2} >
+            <Grid item md={6} sm={12}>
+                <Card sx={{ maxWidth: 500, border: 0, boxShadow:0}}>
+                    <CardMedia
+                    component="img"
+                    height="350"
+                    image={currentOrders?.img}
+                    alt="camera img"
+                    />
+                    <CardContent >
+                    <Typography gutterBottom variant="h5" component="div">
+                        {currentOrders?.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {currentOrders?.description}
+                    </Typography>
+                    </CardContent>
+                    <CardActions>
+                    <Button size="small">Share</Button>
+                    </CardActions>
+                </Card>
+            </Grid>
+            <Grid item md={6} xs={12}>
+                <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Order before we get out of stock!!</Typography>
+                <form className='add-new' onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register("name")} />
                 <input defaultValue={user.email} {...register("email")} />
                 <input placeholder="Billing Address" type='text' {...register("address")} required />
@@ -78,7 +83,9 @@ const BuyNow = () => {
     
                 <input defaultValue={currentOrders?.name} type='text' {...register("camera")} />
                 <div><input placeholder="" type="submit" /></div>
-            </form>
+                </form>
+            </Grid>
+    </Grid>
     </Container>
     </>
     );

@@ -1,9 +1,10 @@
-import { Container, Grid, TextField, Typography } from '@mui/material';
+import { Container, Grid, Typography, Button } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import './Banner.css'
 import bannerImg from '../../../images/banner-img.png'
-import { green, red } from '@mui/material/colors';
+import { NavLink } from 'react-router-dom';
+
 
 
 const Banner = () => {
@@ -15,6 +16,7 @@ const Banner = () => {
             <div>
                 <Typography style={{color:"#0158"}} variant="h3"  >Your safety is our first piority </Typography>
                 <Typography variant="h6" style={{color:"rgba(0,0,0, .9)"}}>Closed Circuit Television (CCTV) is a system in which all elements – from the cameras to the recording devices – are directly connected in order to keep the video from bein </Typography>
+                <NavLink style={{textDecoration:"none"}} to="/ourcollection" ><Button variant='contained'>View Our Collection</Button></NavLink>
 
             </div>
         </Container>

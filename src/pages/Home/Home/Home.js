@@ -2,6 +2,9 @@ import React from 'react';
 import Header from '../../Shared/Header/Header';
 import Banner from '../Banner/Banner';
 import CctvCollection from '../CcctvCollection/CctvCollection';
+import Ratings from '../Ratings/Ratings';
+import ReviewSliders from '../ReviewSliders/ReviewSliders';
+
 
 const Home = () => {
     return (
@@ -9,6 +12,8 @@ const Home = () => {
             <Header></Header>
             <Banner></Banner>
             <CctvCollection></CctvCollection>
+            <ReviewSliders></ReviewSliders>
+            <Ratings></Ratings>
         </div>
     );
 };

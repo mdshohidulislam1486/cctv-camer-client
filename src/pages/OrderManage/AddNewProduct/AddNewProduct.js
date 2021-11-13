@@ -6,12 +6,13 @@ import './AddNewProudct.css'
 
 
 const AddNewProduct = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
      const onSubmit = data => {
         axios.post('https://damp-shelf-10750.herokuapp.com/cctv', data)
         .then(res =>{
             console.log(res)
         } )
+        data.reset()
      };
 
     return (
