@@ -1,8 +1,24 @@
-.banner-section{
+/* .banner-section{
     background-image: url('../../../images/banner.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size:contain;
     width: 100%;
     background-blend-mode: hard-light;
-}
+} */
+.each-slide > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+  .each-slide div {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+  
