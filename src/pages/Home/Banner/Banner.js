@@ -1,8 +1,6 @@
-import { Container, Grid, Typography, Button } from '@mui/material';
-import { Box } from '@mui/system';
+import {  Button } from '@mui/material';
 import React from 'react';
 import './Banner.css'
-import bannerImg from '../../../images/banner-img.png'
 import { NavLink } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'

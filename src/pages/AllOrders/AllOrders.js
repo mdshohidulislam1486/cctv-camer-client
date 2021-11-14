@@ -1,7 +1,7 @@
 import { Container } from '@mui/material';
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AllOrder from '../AllOrder/AllOrder';
-import Header from '../Shared/Header/Header';
+
 
 const AllOrders = () => {
 const [orders, setOrders] = useState([])

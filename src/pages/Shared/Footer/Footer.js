@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Container } from '@mui/material';
-import { flexbox } from '@mui/system';
 import { blue} from '@mui/material/colors';
 
 const Footer = () => {

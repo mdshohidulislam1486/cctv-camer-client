@@ -6,8 +6,8 @@
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
     appId: process.env.REACT_APP_APP_ID,
 };
-export default firebaseConfig;
- */
+export default firebaseConfig; */
+
  const firebaseConfig = {
     apiKey: "AIzaSyA5ek36QpKH3baFDj7XnFqgDYKr7N-dwUk",
     authDomain: "cctv-camera-27aaf.firebaseapp.com",
