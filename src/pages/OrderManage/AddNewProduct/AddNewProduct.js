@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
@@ -17,7 +17,10 @@ const AddNewProduct = () => {
      };
 
     return (
+    <div className='App'>
+    <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Add a new product </Typography>
     <Container sx={{display:'flex', justifyContent:'center'}}>
+         
         <form className="add-new" onSubmit={handleSubmit(onSubmit)}>
            
             <input placeholder="Enter name" {...register("name")} />
@@ -35,6 +38,7 @@ const AddNewProduct = () => {
             <input type="submit" />
         </form>
     </Container>
+    </div>
     );
 };
 

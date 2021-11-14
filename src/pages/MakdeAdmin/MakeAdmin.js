@@ -1,4 +1,4 @@
-import { Alert, Button, TextField } from '@mui/material';
+import { Alert, Button, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 const MakeAdmin = () => {
@@ -31,11 +31,16 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div>
+        <div className='App'>
+           
            <h2>Make and admin</h2> 
+
+           <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Only add email if you want to make this person an editor of your website</Typography>
 
            <form onSubmit={handdleAdminSubmit}>
            <TextField onBlur={handleOnBlur} id="standard-basic" label="Email" type='email' variant="standard" />
+           <br/>
+           <br/>
            <Button type='submit' variant='contained'>Make Admin</Button>
 
            </form>
