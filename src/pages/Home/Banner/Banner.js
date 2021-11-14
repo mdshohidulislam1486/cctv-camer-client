@@ -10,11 +10,11 @@ import 'react-slideshow-image/dist/styles.css'
 
 const slideImages = [
   {
-    url:'https://thumbs.dreamstime.com/b/surveillance-cctv-security-camera-isolated-white-background-209300049.jpg',
+    url:'https://www.gms-group.co.uk/wp-content/uploads/2018/01/CCTV-Page-Header.jpg',
     caption: 'Our vision is to make your home secure'
   },
   {
-    url: 'https://thumbs.dreamstime.com/b/cctv-security-camera-security-camera-inside-shopping-centre-blury-backround-banner-panorama-cctv-security-camera-security-207659885.jpg',
+    url: 'https://www.rockslocks.com/wp-content/uploads/2019/09/cctv_header.jpg',
     caption: 'We provide you an ultimate solution for your home security'
   },
   {

@@ -35,7 +35,7 @@ const MakeAdmin = () => {
            
            <h2>Make and admin</h2> 
 
-           <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Only add email if you want to make this person an editor of your website</Typography>
+           <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Only add email if you want to make this person an editor of this site</Typography>
 
            <form onSubmit={handdleAdminSubmit}>
            <TextField onBlur={handleOnBlur} id="standard-basic" label="Email" type='email' variant="standard" />

@@ -22,7 +22,7 @@ const OurReviews = () => {
    },[])
     return (
         <div className="App">
-             <h2>Your review help us to spread our message </h2>
+             <h2>Your review help us to spread our message sign in to Rate us! </h2>
             <Slider {...settings} sx={{display:'flex'}}>
                 {
                     reviws.map(review =><ReviewSliders key={review._id} review={review}></ReviewSliders>)
