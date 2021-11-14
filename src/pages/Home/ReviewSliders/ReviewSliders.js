@@ -15,11 +15,11 @@ const ReviewSliders = ({review}) => {
  
     
 
-    const {name, rating} = review
+    const {name, rating, comment} = review
     const [value, setValue] = React.useState(rating);
 
     return (
-    <Card sx={{ minWidth: 275, mx:2, my:2 }}>
+    <Card sx={{ minWidth: 275, mx:2, my:2, cursor:"pointer"}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {name}
@@ -29,9 +29,7 @@ const ReviewSliders = ({review}) => {
         <Rating name="read-only" value={value} readOnly />
         </Typography>
         <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          {comment}
         </Typography>
       </CardContent>
       
