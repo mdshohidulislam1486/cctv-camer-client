@@ -6,14 +6,15 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Ratings = () => {
-    
+    const location = window.location
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
        axios.post('https://damp-shelf-10750.herokuapp.com/reviews', data)
        .then(res =>{
            console.log(res)
+           location.reload()
        } )
-    
+       
     };
      const {user} = useAuth()
 
@@ -23,7 +24,7 @@ const Ratings = () => {
                 <form  className='add-new' onSubmit={handleSubmit(onSubmit)}>
                 <input sx={{mb:1}} defaultValue={user.displayName} {...register("name", { required: true })} />
                 <textarea sx={{mb:1}} placeholder='Write your review' {...register("comment", { required: true })} />
-                <input placeholder='Rate use out of 5' type="number" {...register("rating", { min: 1, max: 5 })} />
+                <input placeholder='Rate use out of 5' type="number" {...register("rating", { min: 1, max: 5 }, { required: true })} />
                 <input type="submit" />
                 </form>
                 </Container>
