@@ -76,12 +76,12 @@ const BuyNow = () => {
             <Grid item md={6} xs={12}>
                 <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Order before we get out of stock!!</Typography>
                 <form className='add-new' onSubmit={handleSubmit(onSubmit)}>
-                <input defaultValue={user.displayName} {...register("name")} />
-                <input defaultValue={user.email} {...register("email")} />
+                <input defaultValue={user.displayName} {...register("name", { required: true })}/>
+                <input defaultValue={user.email} {...register("email") } />
                 <input placeholder="Billing Address" type='text' {...register("address")} required />
                 <input placeholder="Enter Phone number" type="number" {...register("phonenumber")} required />
     
-                <input defaultValue={currentOrders?.name} type='text' {...register("camera")} />
+                <input defaultValue={currentOrders?.name} type='text' {...register("camera", { required: true })} />
                 <div><input placeholder="" type="submit" /></div>
                 </form>
             </Grid>

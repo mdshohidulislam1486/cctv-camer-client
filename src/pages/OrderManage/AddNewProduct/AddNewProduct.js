@@ -12,7 +12,8 @@ const AddNewProduct = () => {
         .then(res =>{
             console.log(res)
         } )
-        data.reset()
+    
+        
      };
 
     return (
