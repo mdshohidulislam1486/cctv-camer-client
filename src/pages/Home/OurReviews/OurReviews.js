@@ -1,7 +1,20 @@
 import { Reviews } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
+import ReviewSliders from '../ReviewSliders/ReviewSliders';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const OurReviews = () => {
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      };
+
    const [reviws, setReviews] = useState([])
    useEffect(()=>{
        fetch('https://damp-shelf-10750.herokuapp.com/reviews')
@@ -9,8 +22,13 @@ const OurReviews = () => {
        .then(data => setReviews(data))
    },[])
     return (
-        <div>
-            <h2>These are our reviews {reviws.length}</h2>
+        <div className="App">
+             <h2>Your review help us to spread our message </h2>
+            <Slider {...settings} sx={{display:'flex'}}>
+                {
+                    reviws.map(review =><ReviewSliders kye={review._id} review={review}></ReviewSliders>)
+                }
+            </Slider>
           
         </div>
     );

@@ -18,7 +18,7 @@ const Ratings = () => {
      const {user} = useAuth()
 
     return (
-        <div sx={{display:'flex', justifyContent:'center', alignItems:"center"}}>      
+        <div style={{marginTop:'50px'}} sx={{display:'flex', justifyContent:'center', alignItems:"center"}}>      
                 <Container sx={{mb:5}}>
                 <form  className='add-new' onSubmit={handleSubmit(onSubmit)}>
                 <input sx={{mb:1}} defaultValue={user.displayName} {...register("name", { required: true })} />

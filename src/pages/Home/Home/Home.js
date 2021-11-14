@@ -4,7 +4,6 @@ import Banner from '../Banner/Banner';
 import CctvCollection from '../CcctvCollection/CctvCollection';
 import OurReviews from '../OurReviews/OurReviews';
 import Ratings from '../Ratings/Ratings';
-import ReviewSliders from '../ReviewSliders/ReviewSliders';
 
 
 const Home = () => {
@@ -13,7 +12,6 @@ const Home = () => {
             <Header></Header>
             <Banner></Banner>
             <CctvCollection></CctvCollection>
-            <ReviewSliders></ReviewSliders>
             <OurReviews></OurReviews>
             <Ratings></Ratings>
         </div>
