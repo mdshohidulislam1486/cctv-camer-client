@@ -6,11 +6,13 @@ import './AddNewProudct.css'
 
 
 const AddNewProduct = () => {
+    const location = window.location
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
      const onSubmit = data => {
         axios.post('https://damp-shelf-10750.herokuapp.com/cctv', data)
         .then(res =>{
             console.log(res)
+            location.reload()
         } )
     
         
@@ -35,7 +37,7 @@ const AddNewProduct = () => {
             <br/>
 
             
-            <input type="submit" />
+            <input style={{cursor:'pointer'}} type="submit" />
         </form>
     </Container>
     </div>

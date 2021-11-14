@@ -25,7 +25,7 @@ const Ratings = () => {
                 <input sx={{mb:1}} defaultValue={user.displayName} {...register("name", { required: true })} />
                 <textarea sx={{mb:1}} placeholder='Write your review' {...register("comment", { required: true })} />
                 <input placeholder='Rate use out of 5' type="number" {...register("rating", { min: 1, max: 5 }, { required: true })} />
-                <input type="submit" />
+                <input style={{cursor:'pointer'}} type="submit" />
                 </form>
                 </Container>
 

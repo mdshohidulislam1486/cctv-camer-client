@@ -28,8 +28,8 @@ const Header = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
         
             </Typography>
-            <NavLink  style={{textDecoration:'none'}} to='/home'> <Button color="inherit">Home</Button></NavLink>
-            <NavLink style={{textDecoration:'none'}} to='/ourcollection'> <Button s sx={{textDecoration:"none", borderBottom:'none'}} color="inherit">Our Collection</Button></NavLink>
+            <NavLink  style={{textDecoration:'none', color:"#fff"}} to='/home'> <Button color="inherit">Home</Button></NavLink>
+            <NavLink style={{textDecoration:'none', color:"#fff"}} to='/ourcollection'> <Button s sx={{textDecoration:"none", borderBottom:'none'}} color="inherit">Our Collection</Button></NavLink>
              {user?.email ?
                 <Box>
                     

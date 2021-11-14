@@ -1,4 +1,3 @@
-import { Reviews } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import ReviewSliders from '../ReviewSliders/ReviewSliders';
 import "slick-carousel/slick/slick.css";
@@ -26,7 +25,7 @@ const OurReviews = () => {
              <h2>Your review help us to spread our message </h2>
             <Slider {...settings} sx={{display:'flex'}}>
                 {
-                    reviws.map(review =><ReviewSliders kye={review._id} review={review}></ReviewSliders>)
+                    reviws.map(review =><ReviewSliders key={review._id} review={review}></ReviewSliders>)
                 }
             </Slider>
           
