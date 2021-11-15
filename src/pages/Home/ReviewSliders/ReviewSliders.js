@@ -16,7 +16,7 @@ const ReviewSliders = ({review}) => {
     
 
     return (
-    <Card sx={{ minWidth: 275, mx:2, my:2, cursor:"pointer"}}>
+    <Card sx={{ mx:2, my:5, cursor:"pointer"}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {name}

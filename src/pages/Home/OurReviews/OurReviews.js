@@ -10,7 +10,7 @@ const OurReviews = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       };
 
@@ -21,9 +21,9 @@ const OurReviews = () => {
        .then(data => setReviews(data))
    },[])
     return (
-        <div className="App">
+        <div className="App" style={{marginBottom:'30px', overflow:'hidden'}}>
              <h2>Your review help us to spread our message sign in to Rate us! </h2>
-            <Slider {...settings} sx={{display:'flex'}}>
+            <Slider {...settings} >
                 {
                     reviws.map(review =><ReviewSliders key={review._id} review={review}></ReviewSliders>)
                 }

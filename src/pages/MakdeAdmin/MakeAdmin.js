@@ -33,7 +33,7 @@ const MakeAdmin = () => {
     return (
         <div className='App'>
            
-           <h2>Make and admin</h2> 
+           <h2>Make an admin</h2> 
 
            <Typography variant='h4' style={{color:'blue', paddingBottom:"10px"}}>Only add email if you want to make this person an editor of this site</Typography>
 
