@@ -1,10 +1,25 @@
-.grid-item{
-    box-shadow: 1px 1px 2px 1px gray;
-   text-align: center;
+.grid-items{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
    cursor: pointer;
    transition: .6s ease-in-out all;
    border-radius: 10px;
+   grid-template-columns: repeat(3, 1fr);
 }
+
+
+
+ @media only screen and (max-width: 800px) {
+    .grid-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+ @media only screen and (max-width: 500px) {
+    .grid-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
 .custom-grid{
 

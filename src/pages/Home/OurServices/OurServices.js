@@ -44,19 +44,23 @@ const OurServices = () => {
     return (
        <>
        <Container>
+       <div style={{ width: '100%', paddingBottom:'20px' }}>
+                    <Box>
+                        <Item>
+                         <Typography style={{fontWeight:700}} variant='h3' component="div">
+                              Keep An Eye On Everything <br/> With Our Video Security!
+                            </Typography>
+                            <Typography>Not only will this reduce the probability of crime happening on your property, it will reduce or eliminate any liability that falls on you if you can show you have solid, well-designed commercial building security systems in place.</Typography>
+                        </Item>
+                        
+                    </Box>
+            </div>
         <div style={{ width: '100%' }}>
-                    <Box
-                        sx={{
-                        display: 'grid',
-                        columnGap: 3,
-                        rowGap: 1,
-                        gridTemplateColumns: 'repeat(3, 1fr)',
-                        }}
-                    >
-                        <Item>1</Item>
-                        <Item>2</Item>
-                        <Item>3</Item>
-                        <Item>4</Item>
+                    <Box className='grid-items'>
+                        <Item className='grid-item'>1</Item>
+                        <Item className='grid-item'>1</Item>
+                        <Item className='grid-item'>1</Item>
+                       
                     </Box>
             </div>
        </Container>
@@ -71,10 +75,7 @@ export default OurServices;
                 <Box style={{padding:"10px"}}>
                 <Grid  container sx={{p:2}} spacing={1}>
                     <Grid item xs={12} md={8}>
-                            <Typography style={{fontWeight:700}} variant='h3' component="div">
-                              Keep An Eye On Everything <br/> With Our Video Security!
-                            </Typography>
-                            <Typography>Not only will this reduce the probability of crime happening on your property, it will reduce or eliminate any liability that falls on you if you can show you have solid, well-designed commercial building security systems in place.</Typography>
+                            
                     </Grid>
                     <Grid  item xs={0} md={4}>
                         
