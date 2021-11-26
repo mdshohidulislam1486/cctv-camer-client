@@ -3,7 +3,7 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
    cursor: pointer;
-   transition: .6s ease-in-out all;
+   
    border-radius: 10px;
    grid-template-columns: repeat(3, 1fr);
 }

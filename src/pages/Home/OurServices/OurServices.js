@@ -15,13 +15,13 @@ function Item(props) {
     return (
       <Box
         sx={{
-          bgcolor: 'rgba(0,0,0, .4)',
-          color: 'white',
+          bgcolor: 'rgba(39, 78, 227, 0.46)',
           p: 1,
           borderRadius: 1,
           textAlign: 'center',
           fontSize: '1rem',
           fontWeight: '700',
+          transition:".7s ease-in-out all",
           ...sx,
         }}
         {...other}
@@ -57,10 +57,23 @@ const OurServices = () => {
             </div>
         <div style={{ width: '100%' }}>
                     <Box className='grid-items'>
-                        <Item className='grid-item'>1</Item>
-                        <Item className='grid-item'>1</Item>
-                        <Item className='grid-item'>1</Item>
-                       
+                        <Item className='grid-item'>Alarm Monitoring 24/7</Item>
+                        <Item className='grid-item'>Security Monitoring Equipment</Item>
+                        <Item className='grid-item'>Fire Monitor And Detection</Item>
+                        <Item className='grid-item'> Remote Arm And Disarm</Item>
+                        <Item className='grid-item'>Smart Home Controls</Item>
+                        <Item className='grid-item'> Alert, Schedules, Automations </Item>
+                        <Item className='grid-item'>Live Stream From Any Mobile</Item>
+                        <Item className='grid-item'>Record And save Video Clips</Item>
+                        <Item className='grid-item'>Life Time Rate Lock Gurantee</Item>
+                        <Item className='grid-item'>Life Time Equipment Warranty</Item>
+                        <Item className='grid-item'>Easy And Fair Cancellation</Item>
+                        <Item className='grid-item'>Professional Grade Protection</Item>
+                    </Box>
+                    <Box>
+                        <Typography sx={{mt:5, p:5, borderRadius:1 }} style={{backgroundColor:'rgba(39, 78, 227, 0.46)'}}>
+                        For the Security and IT directors ensuring our places of work and leisure are safe. For the Chief Technology Officers shaping the smart businesses of tomorrow. We delivers powerful and insightful security solutions that enable protectors to drive forward. As the leader in home security, we can help you customize a home security system to meet your safety needs
+                        </Typography>
                     </Box>
             </div>
        </Container>
@@ -72,55 +85,14 @@ export default OurServices;
 
   // eslint-disable-next-line no-lone-blocks
   {/*  <Container  >
-                <Box style={{padding:"10px"}}>
-                <Grid  container sx={{p:2}} spacing={1}>
-                    <Grid item xs={12} md={8}>
-                            
+                
+                  
+                
+                    <Grid  item xs={12} md={6}>
+                    
                     </Grid>
-                    <Grid  item xs={0} md={4}>
+                    <Grid  item xs={12} md={6}>
                         
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Alarm Monitoring 24/7
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Security Monitoring Equipment
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Fire Monitor And Detection
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Remote Arm And Disarm
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Smart Home Controls
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Live Stream From Any Mobile
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Alert, Schedules, Automations 
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Record And save Video Clips
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                       Life Time Rate Lock Gurantee
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Life Time Equipment Warranty
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Easy And Fair Cancellation
-                    </Grid>
-                    <Grid className='grid-item' item xs={12} md={4}>
-                        Professional Grade Protection
-                    </Grid>
-                    <Grid  item xs={12} md={6}>
-                    For the Security and IT directors ensuring our places of work and leisure are safe. For the Chief Technology Officers shaping the smart businesses of tomorrow. We delivers powerful and insightful security solutions that enable protectors to drive forward. As the leader in home security, we can help you customize a home security system to meet your safety needs
-                    </Grid>
-                    <Grid  item xs={12} md={6}>
-                        <NavLink style={{textDecoration:'none'}} to='/ourcollection'><Button>View Our Services</Button></NavLink>
                     </Grid>
                     
                 </Grid>
