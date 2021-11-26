@@ -1,16 +1,75 @@
-import { Button, Container, Typography } from '@mui/material';
+import { Button, Container, Paper, Typography } from '@mui/material';
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import './OurServices.css'
 import { NavLink } from 'react-router-dom';
+import { styled } from '@mui/system';
+import PropTypes from 'prop-types';
+
+
+
+
+function Item(props) {
+    const { sx, ...other } = props;
+    return (
+      <Box
+        sx={{
+          bgcolor: 'rgba(0,0,0, .4)',
+          color: 'white',
+          p: 1,
+          borderRadius: 1,
+          textAlign: 'center',
+          fontSize: '1rem',
+          fontWeight: '700',
+          ...sx,
+        }}
+        {...other}
+      />
+    );
+  }
+  
+  Item.propTypes = {
+    sx: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object])),
+      PropTypes.func,
+      PropTypes.object,
+    ]),
+  };
+  
 
 const OurServices = () => {
+
+    
     return (
-        <div className='custom-grid' style={{marginTop:"2em", display:'flex', justifyContent:"center", alignItems:'center'}}>
-            <Container  >
+       <>
+       <Container>
+        <div style={{ width: '100%' }}>
+                    <Box
+                        sx={{
+                        display: 'grid',
+                        columnGap: 3,
+                        rowGap: 1,
+                        gridTemplateColumns: 'repeat(3, 1fr)',
+                        }}
+                    >
+                        <Item>1</Item>
+                        <Item>2</Item>
+                        <Item>3</Item>
+                        <Item>4</Item>
+                    </Box>
+            </div>
+       </Container>
+        </>
+    );
+};
+
+export default OurServices;
+
+  // eslint-disable-next-line no-lone-blocks
+  {/*  <Container  >
                 <Box style={{padding:"10px"}}>
-                <Grid  container spacing={2}>
+                <Grid  container sx={{p:2}} spacing={1}>
                     <Grid item xs={12} md={8}>
                             <Typography style={{fontWeight:700}} variant='h3' component="div">
                               Keep An Eye On Everything <br/> With Our Video Security!
@@ -66,9 +125,4 @@ const OurServices = () => {
                 </Grid>
 
                 </Box>
-            </Container>
-        </div>
-    );
-};
-
-export default OurServices;
+            </Container> */}
