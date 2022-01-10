@@ -19,13 +19,13 @@ const Header = () => {
     const useStyle = makeStyles({
         navItem:{
             [theme.breakpoints.down('sm')]: {
-                display:'none'
+                display:'none !important'
                }
         },
-    navIcon:{
-        [theme.breakpoints.up('sm')]: {
-           display:'none'
-          }
+            navIcon:{
+                [theme.breakpoints.up('sm')]: {
+                display:'none !important'
+                }
     }
     })
 
