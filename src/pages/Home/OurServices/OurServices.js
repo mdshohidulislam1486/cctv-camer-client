@@ -15,7 +15,7 @@ function Item(props) {
     return (
       <Box
         sx={{
-          bgcolor: 'rgba(39, 78, 227, 0.46)',
+          bgcolor: 'rgba(39, 78, 227, 0.16)',
           p: 1,
           borderRadius: 1,
           textAlign: 'center',
@@ -71,7 +71,7 @@ const OurServices = () => {
                         <Item className='grid-item'>Professional Grade Protection</Item>
                     </Box>
                     <Box>
-                        <Typography sx={{mt:5, p:5, borderRadius:1 }} style={{backgroundColor:'rgba(39, 78, 227, 0.46)'}}>
+                        <Typography sx={{mt:5, p:5, borderRadius:1 }} style={{backgroundColor:'rgba(39, 78, 227, 0.16)'}}>
                         For the Security and IT directors ensuring our places of work and leisure are safe. For the Chief Technology Officers shaping the smart businesses of tomorrow. We delivers powerful and insightful security solutions that enable protectors to drive forward. As the leader in home security, we can help you customize a home security system to meet your safety needs
                         </Typography>
                     </Box>
