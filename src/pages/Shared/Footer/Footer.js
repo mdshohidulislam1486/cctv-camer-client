@@ -1,11 +1,19 @@
 import React from 'react';
-import { Box, Container } from '@mui/material';
-import { blue} from '@mui/material/colors';
+import { Box, Container, Typography } from '@mui/material';
+import logo from '../../../images/logo.jpg'
+
 
 const Footer = () => {
     return (
-        <div>
-            <Box  sx={{ bgcolor: blue[500], pt:2}} >
+        <Box>
+            <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:{xs:"column", sm:'row'}}}>
+                <Typography variant='h4' sx={{fontWeight:'700'}}>
+                    Let's Explore 
+                </Typography>
+                <img style={{width:'10rem'}} src={logo} alt="" />
+                <Typography variant='h4' sx={{fontWeight:'700'}}>More about us</Typography>
+            </Box>
+            <Box  sx={{ bgcolor:'#263238', pt:2}} >
             <Container sx={{display:{md:"flex"}, justifyContent:'space-between', flexWrap:'wrap', flexDirection:{md:'row'}}}>
             <div >
                 <p>Contact</p>
@@ -23,7 +31,7 @@ const Footer = () => {
             </div>
             </Container>
           </Box>
-        </div>
+        </Box>
     );
 };
 
