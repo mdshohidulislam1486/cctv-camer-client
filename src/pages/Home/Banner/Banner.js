@@ -4,6 +4,8 @@ import './Banner.css'
 import { NavLink } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+import { makeStyles } from '@mui/styles';
+import { useTheme } from '@mui/material';
 
 
 const slideImages = [
@@ -27,6 +29,16 @@ const slideImages = [
 
 
 const Banner = () => {
+  const theme = useTheme()
+  const useStyles = makeStyles({
+    imgSize:{
+      [theme.breakpoints.down('sm')]: {
+          width:'18rem'
+         }
+  },
+  })
+
+  const {imgSize} = useStyles()
     return (
       <div className="">
       <Slide>
@@ -38,8 +50,8 @@ const Banner = () => {
               <Typography>{slideImage.caption}</Typography>
               <NavLink style={{textDecoration:"none", marginTop:'1em'}} to="/ourcollection" ><Button variant='contained'>View Our Collection</Button></NavLink>
               </Box>
-              <Box>
-                  <img style={{width:'30rem', borderRadius:"1rem"}} src={slideImage.img} alt="banner-img" />
+              <Box sx={{position:'relative'}}>
+                  <img className={imgSize} style={{maxWidth:'30rem', borderRadius:"1rem"}} src={slideImage.img} alt="banner-img" />
               </Box>
               </Container>
               
