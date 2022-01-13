@@ -24,41 +24,41 @@ const Footer = () => {
             <Box  sx={{ bgcolor:'#263238', pt:2}} >
             <Container sx={{display:{md:"flex"}, justifyContent:'space-between', flexWrap:'wrap', flexDirection:{md:'row'}, alignItems:'center'}}>
                 <Box >
-                    <Typography sx={{fontFamily:'cursive'}}>
+                    <Typography variant='h6' sx={{fontFamily:'cursive', color:"#808080"}}>
                         TopRated
                     </Typography>
-                    <Typography>
+                    <Typography variant='body2' color='#808080'>
                         Security Solution
                     </Typography>
                     <Box sx={{cursor:'pointer'}}>
-                        <TwitterIcon></TwitterIcon>
-                        <FacebookIcon></FacebookIcon>
-                        <LinkedInIcon></LinkedInIcon>
-                        <YouTubeIcon></YouTubeIcon>
+                        <TwitterIcon  sx={{color:'#808080'}}></TwitterIcon>
+                        <FacebookIcon sx={{color:'#808080'}} ></FacebookIcon>
+                        <LinkedInIcon sx={{color:'#808080'}} ></LinkedInIcon>
+                        <YouTubeIcon  sx={{color:'#808080'}} > </YouTubeIcon>
                     </Box>
-                    <Typography>info@ssolution.com</Typography>
+                    <Typography color="red">info@ssolution.com</Typography>
                 </Box>
                 <Box>
-                    <Typography>
+                    <Typography variant='h6' sx={{ color:'#808080', fontFamily:'cursive'}}>
                         Our Service Area
                     </Typography>
                     <Box sx={{display:'flex',alignItems:'center'}}>
-                        <ChangeCircleIcon></ChangeCircleIcon>
-                        <Typography>Home Solution</Typography>
+                        <ChangeCircleIcon sx={{mr:".8rem", color:'#808080'}}></ChangeCircleIcon>
+                        <Typography variant='body2' sx={{ color:'#808080'}}>Home Solution</Typography>
                        
                     </Box>
                     <Box sx={{display:'flex',alignItems:'center'}}>
-                        <ChangeCircleIcon></ChangeCircleIcon>
-                        <Typography> Public Property management </Typography>
+                        <ChangeCircleIcon sx={{mr:".8rem", color:'#808080'}}></ChangeCircleIcon>
+                        <Typography variant='body2' sx={{ color:'#808080'}}> Public Property management </Typography>
                     </Box>
                     <Box sx={{display:'flex',alignItems:'center'}}> 
-                        <ChangeCircleIcon></ChangeCircleIcon>
-                        <Typography> Private Property </Typography>
+                        <ChangeCircleIcon sx={{mr:".8rem", color:'#808080'}}></ChangeCircleIcon>
+                        <Typography variant='body2' sx={{ color:'#808080'}}> Private Property </Typography>
                     
                     </Box>
                     <Box sx={{display:'flex',alignItems:'center'}}>
-                        <ChangeCircleIcon></ChangeCircleIcon>
-                        <Typography>Corporete 24/7 support</Typography>
+                        <ChangeCircleIcon sx={{mr:".8rem", color:'#808080'}}></ChangeCircleIcon>
+                        <Typography variant='body2' sx={{ color:'#808080'}}>Corporete 24/7 support</Typography>
                     </Box>
 
                 </Box>
